@@ -1,7 +1,3 @@
-# Javascript NASA API
-
-## Set API Url, query, and async/await
-```javascript
 // NASA API
 const count = 10;
 const apiKey = "DEMO_KEY";
@@ -21,4 +17,3 @@ async function getNasaPictures() {
   }
 }
 getNasaPictures();
-```

@@ -105,3 +105,21 @@ function updateDom() {
   });
 }
 ```
+## Save Favorites function, Save to local storage
+```javascript
+// Add result to Favorites
+function saveFavorite(itemUrl) {
+  // Loop through Results Array to select Favorite
+  resultsArray.forEach((item) => {
+    if (item.url.includes(itemUrl) && !favorites[itemUrl]) {
+      favorites[itemUrl] = item;
+      // Show Save Confirmation for 2 seonds
+      saveConfirmed.hidden = false;
+      setTimeout(() => {
+        saveConfirmed.hidden = true;
+      }, 2000);
+    }
+    localStorage.setItem("nasaFavorites", JSON.stringify(favorites));
+  });
+}
+```
